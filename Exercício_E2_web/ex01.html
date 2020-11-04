@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+
+<script type="text/javascript"/>
+
+	function valida(){
+		var nome = document.formulario.nome.value;
+		var sobrenome = document.formulario.sobrenome.value;
+		var email = document.formulario.email.value;
+		var sexo = document.formulario.sexo.value;
+		if(nome != "" && sobrenome != "" && email != "" && sexo != ""){
+		
+		document.formulario.submit()
+		
+		alert("enviado");
+
+		return true;
+		}else{
+		alert("Preencha todos os campos");
+		}
+}
+
+
+
+</script>
+
+<body>
+
+<fieldset>
+
+<form name="formulario" action="processaDados.php" method= "post">
+<table>
+	<tr>
+		<td>
+		Primeiro nome:
+		</td>
+
+		<td>
+			<input type="text" name= "nome"/>
+		</td>	
+	</tr>
+	
+	<tr>
+		<td>
+		Último nome:
+		</td>
+
+		<td>
+			<input type="text" name= "sobrenome"/>
+		</td>	
+	</tr>
+	<tr>
+		<td>
+		Email:
+		</td>
+
+		<td>
+			<input type="text" name= "email"/>
+		</td>	
+	</tr>
+	
+		<tr>
+		<td>
+		<input type = "radio" name = "sexo" value="1">Masculino
+		<br>
+		<input type = "radio" name = "sexo" value="2">Feminino
+		<br>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+		<input type="button" value="clique" onclick="valida()"/>		
+		</td>
+
+		<td>
+		<input type = "reset" value="Refazer"/>
+		</td>	
+	</tr>
+	
+	
+	
+
+</table>
+</form>
+</fieldset>
+
+</body>
+
+</html>

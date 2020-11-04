@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+
+<script type="text/javascript"/>
+
+	function valida(){
+		var animal = document.formulario.animal.value;
+		if(animal != ""){
+		
+		document.formulario.submit()
+		
+		alert("enviado");
+
+		return true;
+		}else{
+		alert("Preencha todos os campos");
+		}
+}
+
+
+
+</script>
+
+<body>
+
+<fieldset>
+
+<form name="formulario" action="processaDados.php" method= "post">
+<table>
+	<tr>
+		<td>
+		Animal:
+		</td>
+
+		<td>
+			<input type="text" name= "animal"/>
+		</td>	
+	</tr>
+
+	<tr>
+		<td>
+		<input type="button" value="enviar" onclick="valida()"/>		
+		</td>
+
+		<td>
+		<input type = "reset" value="Refazer"/>
+		</td>	
+	</tr>
+	
+	
+	
+
+</table>
+</form>
+</fieldset>
+
+
+</body>
+
+</html>

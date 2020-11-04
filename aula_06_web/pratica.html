@@ -1,0 +1,27 @@
+<html>
+<body>
+
+<script type="text/javascript"/>
+
+		var linhas = prompt("Digite a quantidade linhas da tabela ");
+		var linhaInteira = parseInt(linhas);
+		var i = 0;
+		
+		document.write("<table border=1>");
+		for (i = 0; i <= linhaInteira; i++){
+		if(i % 2 == 0){
+		document.write("<tr bgcolor='red'><td> " + i + "</td></tr>");				
+		}
+		else{
+		document.write("<tr bgcolor='blue'><td> " + i + "</td></tr>");				
+		}
+
+	}
+document.write("</table>");		
+			
+	
+		
+</script>	
+
+</body>
+</html>

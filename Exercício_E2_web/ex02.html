@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<table id="myTable">
+
+</table>
+<br>
+
+<button type="button" onclick="myFunction()">Gerar notas</button>
+
+<script>
+function myFunction() {
+  
+  for(var i=20; i>=1; i--){
+  var table = document.getElementById("myTable");
+  var linha = table.insertRow(0);
+  var aluno = linha.insertCell(0);
+  var nota = linha.insertCell(1);
+  var aleatorio= Math.random() * (0, 100);
+  aluno.innerHTML = "aluno" + i;
+  nota.innerHTML = "nota " + Math.round (aleatorio);
+ 
+  }
+}
+</script>
+
+</body>
+</html>

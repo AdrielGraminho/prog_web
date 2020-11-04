@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>login</title>
+</head>
+<script type="text/javascript"/>
+function valida(){
+		var login = document.formulario.login.value;
+		var senha = document.formulario.senha.value;
+		
+		if(login != "" && senha != ""){
+		
+		document.formulario.submit()
+		
+		alert("enviado");
+
+		return true;
+		}else{
+		alert("Preencha todos os campos");
+		}
+}
+</script>
+
+<body>
+
+<form name= "formulario" action="processaLogin.php" method= "post">
+Nome: <input type="text" name= "login"> <br>
+Senha: <input type= "password" name="senha"/><br>
+<input type= "button" value="logar" onclick="valida()"/>
+
+</form>
+
+</body>
+</html>

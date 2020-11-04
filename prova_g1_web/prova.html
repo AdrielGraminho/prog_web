@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+
+<script type="text/javascript"/>
+
+	function valida(){
+		var nome = document.formulario.nome.value;
+		if(nome != ""){
+		
+		document.formulario.submit()
+		
+		alert("enviado");
+
+		return true;
+		}else{
+		alert("Preencha todos os campos");
+		}
+}
+
+
+
+</script>
+
+<body>
+
+<fieldset>
+
+<form name="formulario" action="processaDados.php" method= "post">
+<table>
+	<tr>
+		<td>
+		Primeiro nome:
+		</td>
+
+		<td>
+			<input type="text" name= "nome"/>
+		</td>	
+	</tr>
+	
+		
+	<tr>
+		<td>
+		<input type="button" value="clique" onclick="valida()"/>		
+		</td>
+
+	</tr>
+	
+	
+	
+
+</table>
+</form>
+</fieldset>
+
+</body>
+
+</html>
