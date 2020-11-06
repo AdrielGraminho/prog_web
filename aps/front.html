@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>login</title>
+</head>
+<script type="text/javascript"/>
+function valida(){
+		var produto = document.formulario.produto.value;
+		var preco = document.formulario.preco.value;
+		
+		if(produto != "" && preco != ""){
+		
+		document.formulario.submit()
+		
+		alert("enviado");
+
+		return true;
+		}else{
+		alert("Preencha todos os campos");
+		}
+}
+</script>
+
+<body>
+
+<form name= "formulario" action="processacadastro.php" method= "post">
+Produto: <input type="text" name= "produto"> <br>
+Preco: <input type= "text" name="preco"/><br>
+<input type= "button" value="Enviar" onclick="valida()"/>
+
+</form>
+
+</body>
+</html>
