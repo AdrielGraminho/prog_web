@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html class=pagina>
 <head>
 <meta charset="ISO-8859-1">
-<title>login</title>
+<title>cadastro</title>
+<link href="estilo.css" rel="stylesheet">
+
+<h1>Cadastro de Produtos</h1>
 </head>
 <script type="text/javascript"/>
 function valida(){
@@ -24,12 +27,20 @@ function valida(){
 
 <body>
 
-<form name= "formulario" action="processacadastro.php" method= "post">
-Produto: <input type="text" name= "produto"> <br>
-Preco: <input type= "text" name="preco"/><br>
+<form name= "formulario" action="processacadastro.php" method= "post" >
+
+				Produto	<input type="text" name="produto"/>
+
+				Preço<input type= "text" name="preco"/>
+
+<br><br>
 <input type= "button" value="Enviar" onclick="valida()"/>
 
 </form>
+<button onclick="window.location.href='processacadastro.php'">Continue</button>
 
+</script>
 </body>
+
+
 </html>

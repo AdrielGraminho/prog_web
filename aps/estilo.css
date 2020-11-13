@@ -1,0 +1,14 @@
+@charset "ISO-8859-1";
+
+.pagina {
+  border: 50px solid #7c7; 
+  background-color: #efe;     
+  color: #050;                
+  text-align : center;
+}
+
+h1 {
+	front-size: 3rem;
+	color: 050;
+}
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class=pagina>
+<head>
+<meta charset="ISO-8859-1">
+<title>Cadastro Pessoa</title>
+<link href="estilo.css" rel="stylesheet">
+
+</head>
+<body>
+<h1>Cadastro de Pessoas</h1>
+
+<form class=form name = "formulario" action="processacadastro.php" method = "post">
+<br>
+<table >
+<tr>
+<tr>
+	<td> nome </td>
+
+	<td> <input type = "text" name ="nome"/></td>
+</tr>
+
+<tr>
+	<td> idade </td>
+
+	<td> <input type = "text" name ="idade"/> </td>
+</tr>
+
+<tr>
+</table>
+
+<input type= "button" value="Enviar" onclick="valida()"/></tr>
+
+</form>
+
+<a href="cadastrados.php">Cadastrados</a>
+</body>
+
+<script type="text/javascript"/>
+function valida(){
+		var nome = document.formulario.nome.value;
+		var idade = document.formulario.idade.value;
+		
+		if(nome != "" && idade != ""){
+		
+		document.formulario.submit()
+		
+		alert("enviado");
+
+		return true;
+		}else{
+		alert("Preencha todos os campos");
+		}
+}
+</script>
+
+
+</html>

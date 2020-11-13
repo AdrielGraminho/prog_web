@@ -1,30 +1,27 @@
 <?php
+echo "<link rel=”stylesheet” type=”text/css” href=”estilo.css” />";
 
-if(isset($_SESSION["produto"]) && isset($_SESSION["preco"])== "false"){
+session_start();
 
-$produto= $_POST ['produto'] ;
-$preco= $_POST ['preco'];
-$produto_preco = array ($produto, $preco);
+error_reporting(0);
+ini_set(“display_errors”, 0 );
 
-foreach ($produto_preco as $i){
-    
-    echo $i;
-    
-}
-}
-else{
+if (empty($_SESSION["cadastrado"])) {
 
-$produto= $_POST ['produto'] ;
-$preco= $_POST ['preco'];
+$_SESSION['produto_preco'] = array();
 
-array_push($produto_preco, $produto, $preco);
-
-foreach ($produto_preco as $i){
-    
-    echo $i;
-    
-}
-   
-}
-
+$_SESSION["cadastrado"] = "true";
+ 
+ }
+ $produto = $_POST['produto'];
+ $preco = $_POST['preco'];
+ 
+ array_push($_SESSION['produto_preco'], $produto, $preco);
+       
+ foreach ($_SESSION['produto_preco'] as $i) {
+     
+     echo $i . "<br>";
+ }
+ 
+ 
 ?>
